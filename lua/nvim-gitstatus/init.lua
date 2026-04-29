@@ -131,6 +131,7 @@ local function try_update_status()
 	git_status_is_busy = true
 	vim.system({
 		"git",
+		"--no-optional-locks",
 		"status",
 		"--porcelain=2",
 		"--branch",
